@@ -120,7 +120,7 @@ const SurpriseReveal = () => {
         {/* Romantic card — hidden until 3rd click */}
         <div
           ref={cardRef}
-          className="w-full max-w-[400px] mx-auto opacity-0 pointer-events-none"
+          className={`w-full max-w-[400px] mx-auto ${locked ? '' : 'opacity-0 pointer-events-none'}`}
           style={{ display: locked ? "block" : "none" }}
         >
           <div
@@ -152,15 +152,17 @@ const SurpriseReveal = () => {
               className="text-3xl sm:text-4xl text-primary text-glow mb-4"
               style={{ fontFamily: "'Great Vibes', cursive" }}
             >
-              My Beautiful Love 💖
+              Happy Birthday Rishuuu 💖🎂
             </h3>
-            <p className="text-base sm:text-lg font-body text-foreground/80 leading-relaxed">
-              You unlocked my heart.
-              <br />
-              And now you get the full message.
-              <br />
+            <p className="text-sm sm:text-base font-body text-foreground/80 leading-relaxed text-left max-h-[60vh] overflow-y-auto pr-2">
+              Happy birthday to the bestest girlfriend of the entireeeeee universeeeeeee happy birthday rishuuu babyyyyyyy u are the bestttttt I hope u have the best day and have a goood start for ur 21 euuuuu my baby don't even need fake id to go out anymore dammnn😭😭😭😭. it's a very special dayyy yayyyy this was the day the love of my life was createddddd. I'm sooo lucky to have you in my lifeeee and ni final bday gift emo emo ankoku nene ni final bday gift 6feet diamond🥰😚 i will stop giving bt and annoying u for this single day dw babyluuu once again happy birthday my lovely little Bujji kondaluuuu u are my everything rishu i mean it every time I tell you that u are my home you are special kanna u are soo special there's no one else in this world like youuuu no one is as pretty as you and no one is as bad ass as youuuuu ahh dammnn my baby is sooo talented assl i get soo soo proud when u draw or paint or design or make music tlsaaa i feel like a proud father 😭😭😭😭😭 i wish u follow every passion u want to have the bestest 21st year of ur lifuuuuuuu.ill be right next to you and add some masala to ur 21st year.
+              <br /><br />
+              My cutie baby u are precious to me my love I'm soo soo happy that I have such a wonderful girlfriend who I'm going to marry in few and make my wifeeee🥺 u make everyday special ur presence is enough to turn even the worst day into the best day (iykyk) or u can make it a goood day i hope I make u feel the same way darling nu navvuthu happy ga unte chala andam ga untav anduke epdu nuvvu happy ga unde laga chuskunta ninnu nenu ade naa goal I wish I cdve been right next to you i wdve kissed you and then wished u happy birthdayyyyy and thennn suprise cake cutting chepinchiiii dyson istaaaa tarvata night antha niku prasantata lekunda chesta(that's the main gift) ipd laga cheyan apd ninnu manchiga chuskunta nijamga chaala baaga chuskunta rishu ninnuuuu and slow and soft tooo.
+              <br /><br />
+              No matter what happens i always want you to be right next to me and I will be holding ur hand and kissing it till it annoys you my little baby thanks for always trying to make me better thanks for staying with me and blessings me with your graciousss presence nu navvuthe chaala bauntavvv anduke mottam navvutha ne undali ee year.
+              <br /><br />
               <span className="font-semibold text-primary">
-                Happy Birthday to the most special person in my universe. 💕
+                Happy birthday to the sweetest most precious hottest prettiest and the most talented rishikaaaaaa. The best girlfriend of the decadeee🎂🎂🎂🎂
               </span>
             </p>
           </div>
