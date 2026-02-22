@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 100% 95%;
+    --foreground: 340 40% 20%;
+
+    --card: 340 100% 97%;
+    --card-foreground: 340 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 40% 20%;
+
+    --primary: 330 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 100% 88%;
+    --secondary-foreground: 330 60% 30%;
+
+    --muted: 340 60% 92%;
+    --muted-foreground: 340 20% 50%;
+
+    --accent: 328 100% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 60% 88%;
+    --input: 340 60% 88%;
+    --ring: 330 100% 56%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 340 100% 97%;
+    --sidebar-foreground: 340 40% 20%;
+    --sidebar-primary: 330 100% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 100% 92%;
+    --sidebar-accent-foreground: 340 40% 20%;
+    --sidebar-border: 340 60% 88%;
+    --sidebar-ring: 330 100% 56%;
+
+    --gradient-romantic: linear-gradient(180deg, hsl(340 100% 95%), hsl(340 100% 88%), hsl(340 80% 85%));
+    --glow-pink: 0 0 30px hsl(330 100% 56% / 0.4), 0 0 60px hsl(330 100% 56% / 0.2);
+    --glow-soft: 0 0 20px hsl(340 100% 88% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Coiny', cursive;
+  }
+}
+
+@layer utilities {
+  .font-cursive {
+    font-family: 'Coiny', cursive;
+  }
+
+  .font-body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-glow {
+    text-shadow: var(--glow-pink);
+  }
+
+  .text-glow-soft {
+    text-shadow: var(--glow-soft);
+  }
+
+  .bg-romantic {
+    background: var(--gradient-romantic);
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .floating-slow {
+    animation: floating 5s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+  }
+
+  @keyframes rise {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+  }
+
+  .heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  .scroll-indicator {
+    animation: floating 1.5s ease-in-out infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
